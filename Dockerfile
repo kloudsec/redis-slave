@@ -47,6 +47,7 @@ VOLUME /data
 WORKDIR /data
 
 COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 COPY redis.conf /usr/local/etc/redis/redis.conf
